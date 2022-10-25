@@ -26,7 +26,9 @@ class App extends React.Component {
         const {user} = this.state;
         return (
             <React.Fragment>
-                <ToastContainer/>
+                <ToastContainer
+                    position='top-center'
+                    transition='flip' />
                 <div className="tw-flex tw-flex-col tw-min-h-screen tw-justify-between">
                     <div className="tw-flex-grow">
                         <TopNavNar user={user}/>
