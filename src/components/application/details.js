@@ -106,7 +106,7 @@ function Details() {
                         Change Application Status
                     </h5>
                     {
-                        application.data.status === "Pending" ?
+                            (application.data.status).toLowerCase === ("Pending").toLowerCase ?
                             <div>
 
                                 <form onSubmit={handleSubmit}>
