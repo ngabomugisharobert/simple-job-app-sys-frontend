@@ -1,7 +1,7 @@
 # **exercise 2: Simple Job Application System**
 
 
-**Link** :🔗 https://simple-job-app-sys.herokuapp.com/
+**Link** :🔗 https://6357f6cb141967000992b673--simple-job-application.netlify.app/
 
 
 ## **System process flow**
