@@ -3,6 +3,12 @@
 
 **Link** :🔗 https://6357f6cb141967000992b673--simple-job-application.netlify.app/
 
+## **credentials**
+{
+	"password": "221787",
+	"email": "ngabo.mugisha.bro12@gmail.com"
+}
+
 
 ## **System process flow**
 
