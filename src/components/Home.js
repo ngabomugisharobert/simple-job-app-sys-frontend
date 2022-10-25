@@ -40,21 +40,23 @@ const Home = (props) => {
 
     const handleSubmit = async event => {
         event.preventDefault();
-        const { tformData } = formData;
+        const tformData = formData;
 
         // Create an object of formData
         const jsFormData = new FormData();
         for (let key in tformData) {
             jsFormData.append(key, tformData[key]);
         }
+        for (var pair of jsFormData.entries()) {
+            console.log(pair[0] + ' -- , -- ' + pair[1]);
+        }
+
 
         setIsLoading(true);
         try {
-            console.log(formData, "formData$$$$$$$$$$$")
+            // console.log(formData, "formData$$$$$$$$$$$")
             await http.post(config.apiUrl + "/application", jsFormData, {
                 headers: {
-
-                    Accept: "*",
                     "Content-Type": "multipart/form-data",
                 }
             });
