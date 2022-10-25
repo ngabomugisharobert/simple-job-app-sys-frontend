@@ -51,7 +51,7 @@ const Home = (props) => {
         setIsLoading(true);
         try {
             console.log(formData, "formData$$$$$$$$$$$")
-            await http.post(config.apiUrl + "/applications", jsFormData, {
+            await http.post(config.apiUrl + "/application", jsFormData, {
                 headers: {
 
                     Accept: "*",
