@@ -28,6 +28,8 @@ function Login() {
         try {
             setLoading(true);
             await authService.login(username, password);
+            //key email into local storage
+            localStorage.setItem("email", username);
             window.location = "/applications";
             setLoading(false);
         } catch (ex) {

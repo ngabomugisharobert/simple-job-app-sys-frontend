@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 function TopNavNar({ user }) {
 
+    //get the email from the local storage
+    const email = localStorage.getItem("email");
     return (
         <Navbar bg="light" expand="md" className="tw-py-4" variant="dark">
             <Container>
@@ -19,10 +21,18 @@ function TopNavNar({ user }) {
                         </li>
 
                         {
-                            !user &&
+                            !email ?
                             <li className="nav-item">
-                                <Link to="/login" className="nav-link text-primary">HR Login</Link>
-                            </li>
+                                    <Link to="/login" className="nav-link text-primary">Login</Link>
+                                </li> :
+                                <>
+                                    <li className="nav-item">
+                                        <Link to="/application" className="nav-link text-primary">Applications</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link to="/logout" className="nav-link text-primary">Logout</Link>
+                                    </li>
+                                </>
                         }
                         {
                             user &&
