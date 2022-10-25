@@ -90,7 +90,7 @@ function Details() {
                     <div className="row">
                         <div className="col-md-6">
                             <strong>
-                                <a href={`${config.apiUrl}/application/${application.data.id}/download/cv`}
+                                    <a href={`${application.data.cv}`}
                                     className="btn btn-danger tw-font-semibold tw-rounded-lg" target="_blank" rel="noreferrer">
                                     <DownloadIcon className="tw-h-5 tw-w-5" />
                                     Download CV
