@@ -4,7 +4,8 @@ import { changeApplicationStatus, getApplication } from "../../services/applicat
 import { toast } from "react-toastify";
 import { useParams, useNavigate } from "react-router-dom";
 
-import { DownloadIcon } from "@heroicons/react/outline";
+import { Link } from "react-router-dom";
+import { DownloadIcon, BackspaceIcon } from "@heroicons/react/outline";
 
 const config = require('../../config');
 
@@ -46,7 +47,15 @@ function Details() {
 
     return (
         <div className="container tw-my-10">
+            <div className="d-flex justify-content-between">
             <h4>Application Details</h4>
+                <h3>
+                    <Link to="/applications" className="navbar-brand tw-text-gray-400">
+                        Back to Applications
+                        <BackspaceIcon className="tw-h-5 tw-w-5" />
+                    </Link>
+                </h3>
+            </div>
             {
                 application &&
 
