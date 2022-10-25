@@ -30,7 +30,19 @@ class AllApplications extends Component {
         this.setState({ currentPage: page });
     };
 
-
+    getStatusColor = (status) => {
+        status = status.toLowerCase();
+        switch (status) {
+            case "pending":
+                return "info";
+            case "passed":
+                return "success";
+            case "dropped":
+                return "danger";
+            default:
+                return "tw-text-gray-500";
+        }
+    };
     getPageData = () => {
         const {
             applications: allApplications,
@@ -153,7 +165,8 @@ class AllApplications extends Component {
                                                     <td className="tw-py-1 tw-px-6 tw-text-sm tw-text-gray-500 tw-whitespace-nowrap dark:tw-text-gray-400">
 
                                                         <span
-                                                            className={`badge bg-${application.status_color} tw-rounded-xl`}>
+
+                                                            className={`badge bg-${this.getStatusColor(application.status)} tw-rounded-xl`}>
                                                             {application.status}
                                                         </span>
                                                     </td>

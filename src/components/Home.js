@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
-import { Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import http from "../services/httpService";
 import { Player } from '@lottiefiles/react-lottie-player';
 import { toast } from "react-toastify";
+
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 
 
 const config = require("../config.json");
@@ -14,7 +17,7 @@ const Home = (props) => {
         email: '',
         phoneNumber: '',
         address: '',
-        dateOfBirth: '',
+        dob: '',
         cvAttachment: null
     });
     const [isLoading, setIsLoading] = useState(false);
@@ -144,9 +147,9 @@ const Home = (props) => {
                                     </Form.Group>
                                 </div>
                                 <div className="col-md-6">
-                                    <Form.Group className="mb-3" controlId="dateOfBirth">
+                                    <Form.Group className="mb-3" controlId="dob">
                                         <Form.Label>Date Of Birth</Form.Label>
-                                        <Form.Control type="date" name="dateOfBirth" value={formData.dateOfBirth} required
+                                        <Form.Control type="date" name="dob" value={formData.dob} required
                                             onChange={handleChange} placeholder="Date of Birth" />
                                     </Form.Group>
                                 </div>
@@ -164,7 +167,7 @@ const Home = (props) => {
 
 
 
-                            <Button variant="primary" type="submit" disabled={isLoading}>
+                            <Button variant="contained" size="medium" type="submit" disabled={isLoading}>
                                 Apply
                             </Button>
                         </Form>
